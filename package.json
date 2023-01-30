@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "start": "SET NODE_ENV=production && npx nodemon src/index.ts",
-    "dev": "SET NODE_ENV=development && npx nodemon src/index.ts"
+    "serve": "set NODE_ENV=production && npx nodemon src/index.ts",
+    "dev": "set NODE_ENV=development && npx nodemon src/index.ts"
   },
   "devDependencies": {
     "@types/cookie-parser": "^1.4.3",

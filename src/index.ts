@@ -28,9 +28,10 @@ const accessLogStream = rfs.createStream("access.log", {
 app.use(
   isProduction ? morgan("combined", { stream: accessLogStream }) : morgan("dev")
 );
+const PORT = process.env.NODE_DOCKER_PORT || 8080;
+
 
 app.use("/api", router);
-
-app.listen(3000, () => {
-  console.log("server listening on port localhost:3000");
+app.listen(PORT, () => {
+  console.log(`server listening on port localhost:${PORT}`);
 });
